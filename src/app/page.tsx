@@ -9,9 +9,9 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <DarkModeToggler/>
       <NavigationMenuDemo/>
-     <Button>Sign Up</Button>
+    
      <CardWithForm/>
-     
+     <Button>Sign Up</Button>
      
     </main>
   );

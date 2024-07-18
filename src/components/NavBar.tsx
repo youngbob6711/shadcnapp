@@ -56,8 +56,24 @@ export function NavigationMenuDemo() {
   return (
     <NavigationMenu>
       <NavigationMenuList>
+      <NavigationMenuItem>
+          <NavigationMenuTrigger>Work</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+              {components.map((component) => (
+                <ListItem
+                  key={component.title}
+                  title={component.title}
+                  href={component.href}
+                >
+                  {component.description}
+                </ListItem>
+              ))}
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
+          <NavigationMenuTrigger>About Me</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
@@ -68,12 +84,12 @@ export function NavigationMenuDemo() {
                   >
                     
                     <div className="mb-2 mt-4 text-lg font-medium">
-                      shadcn/ui
+                      Alex Ngii
                     </div>
                     <p className="text-sm leading-tight text-muted-foreground">
-                      Beautifully designed components that you can copy and
-                      paste into your apps. Accessible. Customizable. Open
-                      Source.
+                     front-end developer 
+                     with good and rewarding react js frameworks, 
+                     Inclusive of Nextjs. 
                     </p>
                   </a>
                 </NavigationMenuLink>
@@ -91,7 +107,7 @@ export function NavigationMenuDemo() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Work</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
               {components.map((component) => (
@@ -109,7 +125,17 @@ export function NavigationMenuDemo() {
         <NavigationMenuItem>
           <Link href="/docs" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Documentation
+               Skills
+            </NavigationMenuLink>
+          </Link>
+          <Link href="/docs" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              My Notes
+            </NavigationMenuLink>
+          </Link>
+          <Link href="/docs" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Contacts
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
